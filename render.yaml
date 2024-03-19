@@ -59,8 +59,6 @@ envVarGroups:
         value: INFO
       - key: FORWARDED_ALLOW_IPS
         value: '*'
-      - key: ALLOW_ORIGIN_REGEX
-        sync: false
       - key: SECRET
         generateValue: true
       - key: ENCRYPTION_KEY
