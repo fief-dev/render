@@ -4,6 +4,7 @@ services:
     region: frankfurt
     env: docker
     healthCheckPath: /healthz
+    dockerCommand: fief run-server --no-migrate
     preDeployCommand: sh /app/pre-deploy.sh
     envVars:
       - fromGroup: fief
