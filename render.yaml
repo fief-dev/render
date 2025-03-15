@@ -1,7 +1,7 @@
 services:
   - type: web
     name: fief-server
-    region: frankfurt
+    region: oregon
     env: docker
     healthCheckPath: /healthz
     dockerCommand: fief run-server --no-migrate
@@ -19,7 +19,7 @@ services:
           property: connectionString
   - type: worker
     name: fief-worker
-    region: frankfurt
+    region: oregon
     env: docker
     dockerCommand: fief run-worker -p 1 -t 1
     envVars:
@@ -35,13 +35,13 @@ services:
           property: connectionString
   - type: redis
     name: fief-redis
-    region: frankfurt
+    region: oregon
     ipAllowList: []
     maxmemoryPolicy: noeviction
 
 databases:
   - name: fief-db
-    region: frankfurt
+    region: oregon
     databaseName: fief
     user: fief
     ipAllowList: []
